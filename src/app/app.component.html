@@ -1,0 +1,27 @@
+<!-- app.component.html -->
+<header class="main-header">
+  <div class="header-content">
+    <div class="logo-container">
+      <img src="assets/logo.png" alt="3D Environmental Services Logo" class="logo">
+      <span class="company-name">3D Environmental Services</span>
+    </div>
+    <nav class="main-nav">
+      <ul>
+        <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a></li>
+        <li><a routerLink="/what-we-do" routerLinkActive="active">What We Do</a></li>
+        <li><a routerLink="/who-we-are" routerLinkActive="active">Who We Are</a></li>
+        <li><a routerLink="/contact-us" routerLinkActive="active">Contact Us</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main class="main-content">
+  <router-outlet></router-outlet>
+</main>
+
+<footer class="main-footer">
+  <div class="footer-content">
+    <p>&copy; 2024 3D Environmental Services. All rights reserved.</p>
+  </div>
+</footer>

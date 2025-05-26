@@ -1,0 +1,11 @@
+runtime: nodejs18
+service: default
+
+handlers:
+  - url: /(.*\..+)$
+    static_files: dist/tina-website/browser/\1
+    upload: dist/tina-website/browser/(.*\..+)$
+
+  - url: /.*
+    static_files: dist/tina-website/browser/index.html
+    upload: dist/tina-website/browser/index.html

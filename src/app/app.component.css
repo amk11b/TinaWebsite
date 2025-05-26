@@ -1,0 +1,125 @@
+/* app.component.css */
+:root {
+  --primary-color: #201C4E;
+  --secondary-color: #39A161;
+  --white: #ffffff;
+  --light-gray: #f5f5f5;
+  --transition: all 0.3s ease;
+}
+
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Header Styles */
+.main-header {
+  background-color: var(--primary-color);
+  padding: 1rem 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 50px;
+  width: auto;
+  margin-right: 1rem;
+  object-fit: contain;
+  display: block; /* Ensures the image is always visible */
+}
+
+.company-name {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.main-nav ul {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.main-nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: var(--transition);
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+  background-color: var(--secondary-color);
+}
+
+/* Main Content */
+.main-content {
+  margin-top: 80px; /* Header height + padding */
+  min-height: calc(100vh - 160px); /* Full height minus header and footer */
+  padding: 2rem;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Footer Styles */
+.main-footer {
+  background-color: var(--primary-color);
+  color: var(--white);
+  padding: 1rem 0;
+  margin-top: auto;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .main-nav ul {
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .logo-container {
+    display: flex;
+    align-items: center;
+    min-height: 50px; /* Ensure container has minimum height */
+  }
+}
