@@ -187,3 +187,44 @@ body {
     padding: 0.5rem;
   }
 }
+/* Mobile Navigation Toggle Button */
+.mobile-nav-toggle {
+  display: none; /* Hidden by default on desktop */
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 1.8rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  position: absolute;
+  right: 1rem;
+  top: 1.2rem;
+  z-index: 1001;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.mobile-nav-toggle:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+
+.mobile-nav-toggle:focus {
+  outline: none;
+}
+
+/* Show mobile nav toggle only on mobile */
+@media (max-width: 768px) {
+  .mobile-nav-toggle {
+    display: flex;
+  }
+
+  .header-content {
+    position: relative;
+    padding-right: 3.5rem; /* Make space for the toggle button */
+  }
+}

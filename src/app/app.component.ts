@@ -15,9 +15,17 @@ export class AppComponent {
 
   toggleNav() {
     this.isNavOpen = !this.isNavOpen;
+    const icon = document.querySelector('.mobile-nav-toggle i');
+    if (icon) {
+      icon.className = this.isNavOpen ? 'fas fa-times' : 'fas fa-bars';
+    }
   }
 
   closeNav() {
     this.isNavOpen = false;
+    const icon = document.querySelector('.mobile-nav-toggle i');
+    if (icon) {
+      icon.className = 'fas fa-bars';
+    }
   }
 }
