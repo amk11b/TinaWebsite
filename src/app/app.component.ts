@@ -11,4 +11,13 @@ import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 })
 export class AppComponent {
   title = '3D Environmental Services';
+  isNavOpen = false;
+
+  toggleNav() {
+    this.isNavOpen = !this.isNavOpen;
+  }
+
+  closeNav() {
+    this.isNavOpen = false;
+  }
 }

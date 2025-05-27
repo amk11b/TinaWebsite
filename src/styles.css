@@ -1,4 +1,4 @@
-/* src/styles.css */
+/* styles.css */
 :root {
   --primary-color: #201C4E;
   --secondary-color: #39A161;
@@ -15,9 +15,11 @@ body {
   rgba(57, 161, 97, 0.1)
   );
   font-family: Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-/* Update container backgrounds for better contrast */
+/* Container styles */
 .home-container,
 .what-we-do-container,
 .who-we-are-container,
@@ -28,9 +30,11 @@ body {
   );
   border-radius: 20px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  margin: 1rem 0;
 }
 
-/* Update card backgrounds for better contrast */
+/* Card styles */
 .service-card,
 .intro-card,
 .vision-card,
@@ -44,4 +48,57 @@ body {
   );
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  padding: 1.25rem;
+  margin: 1rem 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .home-container,
+  .what-we-do-container,
+  .who-we-are-container,
+  .contact-container {
+    padding: 1rem;
+    margin: 0.5rem 0;
+    border-radius: 15px;
+  }
+
+  .service-card,
+  .intro-card,
+  .vision-card,
+  .value-card,
+  .form-container,
+  .info-card {
+    padding: 1rem;
+    margin: 0.5rem 0;
+  }
+}
+
+/* Touch optimization */
+@media (hover: none) {
+  .main-nav a,
+  button,
+  .service-card,
+  .intro-card,
+  .vision-card,
+  .value-card {
+    cursor: default;
+  }
+}
+
+/* Font size adjustments for mobile */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.75rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+  h3 {
+    font-size: 1.25rem;
+  }
+  p {
+    font-size: 0.95rem;
+  }
 }
